@@ -105,7 +105,7 @@ def _get_project_build_number
 end
 
 def _set_build_number
-  increment_build_number(build_number: _build_number)
+  increment_build_number(build_number: _build_number) unless ENV['TAB_INCREMENT_BUILD_NUMBER'] == false
 end
 
 def _build_ipa
